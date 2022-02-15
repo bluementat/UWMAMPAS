@@ -19,4 +19,8 @@
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UWMAMPAS.Data\UWMAMPAS.Data.csproj" />
+  </ItemGroup>
+
 </Project>
