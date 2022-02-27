@@ -8,7 +8,7 @@ namespace UWMAMPAS.Data.Models
 {
     public class Performer
     {
-        public Guid Id { get; set; }
+        public Guid PerformerId { get; set; }
         public string Name { get; set; }
 
         public Performer(string Name)

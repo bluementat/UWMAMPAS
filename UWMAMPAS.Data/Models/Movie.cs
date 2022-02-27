@@ -8,7 +8,7 @@ namespace UWMAMPAS.Data.Models
 {
     public class Movie
     {
-        public Guid Id { get; set; }
+        public Guid MovieId { get; set; }
         public string Title { get; set; }
         public string Director { get; set; }
         public List<Performer> Performers { get; set; }
