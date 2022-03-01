@@ -12,8 +12,8 @@ using UWMAMPAS.Web.Data;
 namespace UWMAMPAS.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220227153629_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20220301004449_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

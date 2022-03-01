@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace UWMAMPAS.Data.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -39,6 +39,16 @@ namespace UWMAMPAS.Data.Migrations
                         principalTable: "Movies",
                         principalColumn: "MovieId");
                 });
+
+            migrationBuilder.InsertData(
+                table: "Performers",
+                columns: new[] { "PerformerId", "MovieId", "Name" },
+                values: new object[] { new Guid("0016c147-67ff-46f5-b2d7-f8afbbb61c16"), null, "Javier Bardem" });
+
+            migrationBuilder.InsertData(
+                table: "Performers",
+                columns: new[] { "PerformerId", "MovieId", "Name" },
+                values: new object[] { new Guid("4bff9bef-c675-4ef4-8db6-ddc967738b31"), null, "Benedict Cumberbatch" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Performers_MovieId",

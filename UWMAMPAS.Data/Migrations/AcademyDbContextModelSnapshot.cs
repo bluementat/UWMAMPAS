@@ -59,18 +59,30 @@ namespace UWMAMPAS.Data.Migrations
                     b.HasIndex("MovieId");
 
                     b.ToTable("Performers");
+
+                    b.HasData(
+                        new
+                        {
+                            PerformerId = new Guid("0016c147-67ff-46f5-b2d7-f8afbbb61c16"),
+                            Name = "Javier Bardem"
+                        },
+                        new
+                        {
+                            PerformerId = new Guid("4bff9bef-c675-4ef4-8db6-ddc967738b31"),
+                            Name = "Benedict Cumberbatch"
+                        });
                 });
 
             modelBuilder.Entity("UWMAMPAS.Data.Models.Performer", b =>
                 {
                     b.HasOne("UWMAMPAS.Data.Models.Movie", null)
-                        .WithMany("Performers")
+                        .WithMany("ActorsActresses")
                         .HasForeignKey("MovieId");
                 });
 
             modelBuilder.Entity("UWMAMPAS.Data.Models.Movie", b =>
                 {
-                    b.Navigation("Performers");
+                    b.Navigation("ActorsActresses");
                 });
 #pragma warning restore 612, 618
         }

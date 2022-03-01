@@ -11,13 +11,13 @@ namespace UWMAMPAS.Data.Models
         public Guid MovieId { get; set; }
         public string Title { get; set; }
         public string Director { get; set; }
-        public List<Performer> Performers { get; set; }
+        public List<Performer> ActorsActresses { get; set; }
 
         public Movie(string Title, string Director)
         {
             this.Title = Title;
             this.Director = Director;
-            Performers = new List<Performer>();
+            ActorsActresses = new List<Performer>();
         }
     }
 }

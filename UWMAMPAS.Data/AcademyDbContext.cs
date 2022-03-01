@@ -18,12 +18,12 @@ namespace UWMAMPAS.Data
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
+        {            
             modelBuilder.Entity<Performer>()
-                .HasKey( x => x.PerformerId );
-
-            modelBuilder.Entity<Movie>()
-                .HasKey( x => x.MovieId );
+                .HasData(
+                    new Performer("Javier Bardem") { PerformerId = Guid.NewGuid()},
+                    new Performer("Benedict Cumberbatch") { PerformerId = Guid.NewGuid() }
+                );
         }
 
     }
